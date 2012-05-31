@@ -11,7 +11,6 @@ import expr.Expression;
  * @author Administrator
  */
 public class Domain {
-    private Interval interval ;
     
     public Domain(Expression e){
         
