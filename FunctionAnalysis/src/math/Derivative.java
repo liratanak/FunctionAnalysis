@@ -11,4 +11,8 @@ package math;
 public class Derivative {
     
     private int testInt = 0 ;
+    
+    public static void main(String[] args){
+        
+    }
 }
