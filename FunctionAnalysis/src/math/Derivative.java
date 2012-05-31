@@ -10,4 +10,5 @@ package math;
  */
 public class Derivative {
     
+    private int testInt = 0 ;
 }
