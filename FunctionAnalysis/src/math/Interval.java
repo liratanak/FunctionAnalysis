@@ -4,16 +4,10 @@
  */
 package math;
 
-import expr.Expression;
-
 /**
  *
  * @author Administrator
  */
-public class Domain {
-    private Interval interval ;
+public class Interval {
     
-    public Domain(Expression e){
-        
-    }
 }
