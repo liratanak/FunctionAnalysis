@@ -34,6 +34,6 @@ public class Main {
     /*Note and Pad: http://openetherpad.org/6UzvD37CZu */
 
     public static void main(String[] args) {
-        System.out.println("This our main class of our project.");
+        System.out.println("This our main class of our project. Add Note in the Link above");
     }
 }
