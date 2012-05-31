@@ -4,10 +4,14 @@
  */
 package math;
 
+import expr.Expression;
+
 /**
  *
  * @author Administrator
  */
 public class Domain {
-    
+    public Domain(Expression e){
+        
+    }
 }
