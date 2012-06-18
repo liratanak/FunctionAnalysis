@@ -47,4 +47,9 @@ public class LogarithmNaturalExpression extends SimpleExpression {
 		else
 			return "ln(" + e.toString() + ")" ;
 	}
+
+	@Override
+	public double calculate(double value) {
+		return Math.log(value);
+	}
 }

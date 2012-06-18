@@ -13,7 +13,7 @@ public class ExpoBaseEExpressionParser extends SimpleExpressionParser {
 	@Override
 	public Expression parseExpression(String s) {
 		
-		/*
+		/**
 		 * Example String
 		 * 
 		 * (e^((x)+(1)))

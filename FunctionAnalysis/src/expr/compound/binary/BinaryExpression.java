@@ -2,6 +2,7 @@ package expr.compound.binary;
 
 import expr.Expression;
 import expr.compound.CompoundExpression;
+import expr.simple.ConstantExpression;
 import expr.simple.SimpleExpression;
 
 public abstract class BinaryExpression extends CompoundExpression {
@@ -18,6 +19,7 @@ public abstract class BinaryExpression extends CompoundExpression {
 	public String toString(){
 		
 		String s = "" ;
+		
 		if( e1 instanceof SimpleExpression || e1 instanceof LogarithmeExpression ){
 			s = e1.toString();
 		}else{
@@ -30,6 +32,18 @@ public abstract class BinaryExpression extends CompoundExpression {
 			s +=  e2.toString() ;
 		}else{
 			s += "(" + e2.toString() + ")" ;
+		}
+
+		if( this instanceof SubExpression ){
+			if(e1.equals(new ConstantExpression())){
+				s = "-" + e2.toString() ;
+			}
+		}
+
+		if( this instanceof MulExpression ){
+			if(e1.equals(new ConstantExpression(-1.0))){
+				s = "-" + e2.toString() ;
+			}
 		}
 		
 		return s;

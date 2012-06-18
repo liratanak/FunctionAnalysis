@@ -66,4 +66,9 @@ public class LogarithmeExpression extends BinaryExpression {
 		return "log["+ e1.toString() +"](" + e2.toString() + ")" ; 
 	}
 
+	@Override
+	public double calculate(double value) {
+		return Math.log(e1.calculate(value)) / Math.log(e2.calculate(value)) ;
+	}
+
 }

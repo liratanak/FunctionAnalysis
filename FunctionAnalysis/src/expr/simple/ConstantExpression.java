@@ -5,6 +5,7 @@ import tools.MathTools;
 import expr.Expression;
 
 public class ConstantExpression extends SimpleExpression {
+	
 	private double value ;
 	
 	public ConstantExpression(double val){
@@ -52,5 +53,10 @@ public class ConstantExpression extends SimpleExpression {
 		}
 		return false;
 		
+	}
+
+	@Override
+	public double calculate(double value) {
+		return this.value;
 	}
 }

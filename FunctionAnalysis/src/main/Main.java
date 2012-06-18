@@ -1,41 +1,41 @@
-/*
- * 
- * Global setup:
- Set up git
- git config --global user.name "Your Name"
- git config --global user.email annliratanak@gmail.com
-      
- Next steps:
- mkdir FunctionAnalysis
- cd FunctionAnalysis
- git init
- touch README
- git add README
- git commit -m 'first commit'
- git remote add origin git@github.com:liratanak/FunctionAnalysis.git
- git push -u origin master
-      
- Existing Git Repo?
- cd existing_git_repo
- git remote add origin git@github.com:liratanak/FunctionAnalysis.git
- git push -u origin master
-      
- Importing a Subversion Repo?
- Check out the guide for step by step instructions.
-      
- When you're done:
- Continue
- * 
- * */
 package main;
 
-public class Main {
-    
-    /*Note and Pad: http://openetherpad.org/6UzvD37CZu */
+import gui.FunctionFrame;
 
-    //LRTN
-    
-    public static void main(String[] args) {
-        System.out.println("This our main class of our project. Add Note in the Link above");
-    }
+import javax.swing.SwingUtilities;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    new FunctionFrame("Function Analysis") ;
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(main.Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(main.Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(main.Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(main.Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+		
+		SwingUtilities.invokeLater(new Runnable() {	
+			@Override
+			public void run() {
+				new FunctionFrame("Function Analysis") ;
+			}
+		}) ;
+		
+	}
+
 }

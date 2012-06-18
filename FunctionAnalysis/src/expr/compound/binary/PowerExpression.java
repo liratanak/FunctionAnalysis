@@ -111,4 +111,9 @@ public class PowerExpression extends BinaryExpression {
 		return '^';
 	}
 
+	@Override
+	public double calculate(double value) {
+		return Math.pow(e1.calculate(value) , e2.calculate(value));
+	}
+
 }

@@ -39,4 +39,9 @@ public class ExpoBaseEExpression extends SimpleExpression {
 			return "e^(" + e.toString() + ")" ;
 	}
 
+	@Override
+	public double calculate(double value) {
+		return Math.pow(Math.E, value);
+	}
+
 }

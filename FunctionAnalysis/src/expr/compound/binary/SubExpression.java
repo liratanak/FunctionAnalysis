@@ -51,11 +51,16 @@ public class SubExpression extends BinaryExpression {
 		
 		if( e1.equals(new ConstantExpression()) && e2.equals(new ConstantExpression()) ){
 			return new ConstantExpression();
-		}else if( e1.equals(new ConstantExpression()) ){
-			return e2.simplify() ;
-		}else if( e2.equals(new ConstantExpression()) ){
-			return e1.simplify() ;
+//		}else if( e1.equals(new ConstantExpression()) ){
+//			return e2.simplify() ;
+//		}else if( e2.equals(new ConstantExpression()) ){
+//			return e1.simplify() ;
 		}
 		return this;
+	}
+
+	@Override
+	public double calculate(double value) {
+		return e1.calculate(value) - e2.calculate(value);
 	}
 }

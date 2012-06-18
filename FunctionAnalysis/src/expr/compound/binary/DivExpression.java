@@ -74,4 +74,9 @@ public class DivExpression extends BinaryExpression {
 		
 		return this;
 	}
+
+	@Override
+	public double calculate(double value) {
+		return e1.calculate(value) / e2.calculate(value);
+	}
 }

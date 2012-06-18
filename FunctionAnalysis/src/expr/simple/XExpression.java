@@ -19,7 +19,9 @@ public class XExpression extends SimpleExpression {
 	public Expression simplify() {
 		return this;
 	}
-	
-	
-	
+
+	@Override
+	public double calculate(double value) {
+		return value;
+	}
 }
